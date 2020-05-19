@@ -30,5 +30,6 @@ class Transfer
       @receiver.balance -= @amount
     else
       return "Can't be reversed."
+    end
   end
 end
