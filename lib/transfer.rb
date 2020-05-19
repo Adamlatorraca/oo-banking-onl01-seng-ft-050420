@@ -19,7 +19,7 @@ class Transfer
       receiver.deposit(amount) && sender.deposit(-amount) && self.status = "complete"
       counter += 1
     else
-      ""Transaction rejected. Please check your account balance.""
+      "Transaction rejected. Please check your account balance."
     end
   end
 end
