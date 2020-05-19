@@ -15,7 +15,7 @@ class Transfer
 
   def execute_transaction
     counter = 0
-    if sender.balance > amount && counter == 0
+    while sender.balance > amount && counter == 0
       receiver.deposit(amount) && sender.deposit(-amount) && self.status = "complete"
       counter += 1
     else
