@@ -14,7 +14,10 @@ class Transfer
   end
 
   def execute_transaction
-    if sender.balance < balance + amount
+    if sender.balance > amount
       sender.deposit(amount)
+    else
+      "Insufficient funds"
+    end
   end
 end
