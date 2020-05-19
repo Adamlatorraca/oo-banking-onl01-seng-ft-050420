@@ -14,7 +14,6 @@ class Transfer
   end
 
   def execute_transaction
-    binding.pry
     if sender.balance > amount
       receiver.deposit(amount) && sender.balance = amount
     else
