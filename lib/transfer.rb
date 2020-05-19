@@ -16,7 +16,7 @@ class Transfer
   def execute_transaction
     binding.pry
     if sender.balance > amount
-      receiver.deposit(amount)
+      receiver.deposit(amount) && sender.balance = amount
     else
       "Insufficient funds"
     end
