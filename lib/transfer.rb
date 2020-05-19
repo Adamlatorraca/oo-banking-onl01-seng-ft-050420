@@ -16,6 +16,7 @@ class Transfer
   def execute_transaction
     if sender.balance > amount
       receiver.deposit(amount) && sender.deposit(-amount) && self.status = "complete"
+      break
     else
       "Insufficient funds"
     end
